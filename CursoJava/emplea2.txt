@@ -1,0 +1,49 @@
+ARCHIVO GENERADO EL 2022-07-20
+
+-----------------------------------------------------------
+
+Empleado: Paula Perales Izquierdo. 
+Edad: 21
+Fecha de nacimiento: 2000-11-26
+Estado Civil: S
+Lugar de origen: Benetússer, Valencia
+Email: ppi9@gmail.com
+
+-----------------------------------------------------------
+
+Empleado: Moon Negro Fuego. 
+Edad: 1
+Fecha de nacimiento: 2022-01-22
+Estado Civil: S
+Lugar de origen: Alcoi, Alicante
+Email: m00n@gmail.com
+
+-----------------------------------------------------------
+
+Empleado: Belén Aroca Chula. 
+Edad: 23
+Fecha de nacimiento: 1999-03-31
+Estado Civil: S
+Lugar de origen: Aranjuez, Madrid
+Email: baroca@gmail.com
+
+-----------------------------------------------------------
+
+Empleado: Aurelio Ortiz de Salazar Peris. 
+Edad: 21
+Fecha de nacimiento: 2000-08-21
+Estado Civil: S
+Lugar de origen: San Juan, Alicante
+Email: aods1@gmail.com
+
+-----------------------------------------------------------
+
+Empleado: Carlos Martínez Suárez. 
+Edad: 22
+Fecha de nacimiento: 2000-05-05
+Estado Civil: S
+Lugar de origen: Valencia, Valencia
+Email: camacar36@gmail.com
+
+-----------------------------------------------------------
+

@@ -1,0 +1,8 @@
+ID: 999999 - Belén Aroca Chula
+Tiene el cargo de jefe, con un salario de 1000000.0 euros.
+ID : 696969 - Aurelio Ortiz Peris
+Tiene el cargo de empleado en pringao con un salario de 1.0 y cuyo jefe es: 
+ID: 999999 - Belén Aroca Chulita
+ID : 131313 - Carlos Martínez Suárez
+Tiene el cargo de empleado en Ingenierísimo con un salario de 9.9999998E10 y cuyo jefe es: 
+ID: 999999 - Belén Aroca Chulita
