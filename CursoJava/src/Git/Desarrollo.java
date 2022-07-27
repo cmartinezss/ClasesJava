@@ -17,10 +17,132 @@ Captura del CMD mostrando la generacion de la rama.
 
 package Git;
 
-
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Desarrollo {
 	public static void main (String[] args) {
-		System.out.println("Desarrollo!!");
+		Scanner s = new Scanner(System.in);
+		String how = "";
+		Chistes chistes = new Chistes();
+		CalmDown relax = new CalmDown();
+		
+		chistes.addNewChiste("- ¿Qué hace un mudo bailando? \n- Una mudanza. ja ja ja");
+		chistes.addNewChiste("- ¿De qué se quejan siempre los astronautas? \n- De la falta de espacio. je je je");
+		chistes.addNewChiste("- ¿Cuáles eran los personajes de dibujos animados favoritos del capitán del Titanic? \n- Timón y Pumba. ji ji ji");
+		chistes.addNewChiste("- ¿Qué le dice un 2 a un 0? \n- Veinte conmigo. jo jo jo");
+		chistes.addNewChiste("- Van dos videntes en una moto y se cae el del médium. ju ju ju");
+	
+		
+		relax.addMessage("Tranquilo, te va a salir bien.");
+		relax.addMessage("No te preocupes, todo irá bien. ");
+		relax.addMessage("Relájate y disfruta del proceso.");
+		
+		
+		System.out.println("Buenos días, feliz " + LocalDate.now().getDayOfWeek() + ", " + LocalDate.now().getDayOfMonth() + " de " + LocalDate.now().getMonth() + " de " + LocalDate.now().getYear() + ".");
+		System.out.println("¿Cómo te encuentras hoy?");
+		how = s.nextLine();
+		
+		while(!how.equalsIgnoreCase("triste") && !how.equalsIgnoreCase("alegre") && !how.equalsIgnoreCase("nervioso")) {
+			System.out.println("No entiendo ese estado de ánimo, prueba de nuevo por favor.");
+			how = s.nextLine();
+		}
+		switch(how.toLowerCase()) {
+			case "triste":
+				try {
+					System.out.println("Te contaré un chiste para alegrarte: ");
+					TimeUnit.MILLISECONDS.sleep(1000);							
+					String[] frases = chistes.getNewRandomChiste().split("\n");
+					
+					for(int j = 0; j < frases.length; j++) {
+						System.out.println(frases[j]);
+						if(j != frases.length-1) {
+							for(int i = 0; i < 3; i++) {
+								TimeUnit.MILLISECONDS.sleep(700);							
+								if(i != 2) {
+									System.out.print(".");								
+								}
+								else {
+									System.out.println(".");
+								}
+							}
+						}					
+					}
+				}
+				catch (InterruptedException e) {
+					e.printStackTrace();
+					Thread.currentThread().interrupt();
+				}
+				
+				break;
+			case "alegre":
+				System.out.println("Enhorabuena!!! Disfuta mucho del día.");
+				break;
+			case "nervioso":
+				try {
+					String[] frases = relax.getMessage().split("\n");
+					
+					for(int j = 0; j < frases.length; j++) {
+						System.out.println(frases[j]);
+						if(j != frases.length-1) {
+							for(int i = 0; i < 3; i++) {
+								TimeUnit.MILLISECONDS.sleep(700);							
+								if(i != 2) {
+									System.out.print(".");								
+								}
+								else {
+									System.out.println(".");
+								}
+							}
+						}					
+					}
+				}
+				catch (InterruptedException e) {
+					e.printStackTrace();
+					Thread.currentThread().interrupt();
+				}
+			
+				break;
+			default:
+				break;
+		}
+		s.close();
+		
 	}
 }
+
+
+
+class Chistes{
+	private ArrayList<String> jokes = new ArrayList<>();
+	Random random = new Random();
+	
+	public String getNewRandomChiste() {		
+		return jokes.get(random.nextInt(jokes.size()));
+	}
+	public void addNewChiste(String c) {
+		jokes.add(c);
+	}
+}
+
+
+
+class CalmDown{
+	private ArrayList<String> messages = new ArrayList<>();
+	Random random = new Random();
+	
+	public String getMessage() {
+		return messages.get(random.nextInt(messages.size()));
+	}
+
+	public void addMessage(String message) {
+		messages.add(message);
+	}
+	
+	
+}
+
+
